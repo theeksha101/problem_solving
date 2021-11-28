@@ -1,0 +1,2 @@
+memo = {}
+print(type(memo))
