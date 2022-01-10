@@ -54,7 +54,20 @@ def print_singly_linked_list(node):
 #
 
 def insert_node_at_position(llist, data, position):
-    pass
+    if position == 0:
+        new_head = SinglyLinkedListNode(data)
+        new_head.next = llist
+        return new_head
+    else:
+        temp = llist
+        while position > 1:
+            temp = temp.next
+            position -= 1
+        new_node = SinglyLinkedListNode(data)
+        next_node = temp.next
+        temp.next = new_node
+        new_node.next = next_node
+        return llist
 
 
 # Write your code here
@@ -69,8 +82,12 @@ if __name__ == '__main__':
         llist_item = int(input())
         llist.insert_node(llist_item)
 
-    data = int(input())
+    data = int(input("Enter data to be inserted: "))
 
-    position = int(input())
+    position = int(input("Enter position: "))
 
     llist_head = insert_node_at_position(llist.head, data, position)
+
+    print_singly_linked_list(llist_head)
+    print(llist.head)
+    print(llist.tail)
