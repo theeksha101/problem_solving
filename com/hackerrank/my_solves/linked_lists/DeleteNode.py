@@ -54,17 +54,17 @@ def deleteNode(llist, position):
 
 if __name__ == '__main__':
 
-    llist_count = int(input())
 
     llist = SinglyLinkedList()
 
-    for _ in range(llist_count):
-        llist_item = int(input())
-        llist.insert_node(llist_item)
+    llist.insert_node(4)
+    llist.insert_node(5)
+    llist.insert_node(6)
+    llist.insert_node(7)
+    llist.insert_node(8)
 
-    position = int(input("Enter position: "))
 
-    llist_head = deleteNode(llist.head, position)
+    llist_head = deleteNode(llist.head, 2)
 
     print_singly_linked_list(llist_head)
 

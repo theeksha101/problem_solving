@@ -55,3 +55,4 @@ if __name__ == '__main__':
         llist.insert_node(llist_item)
 
     printLinkedList(llist.head)
+    print(llist.head.data)

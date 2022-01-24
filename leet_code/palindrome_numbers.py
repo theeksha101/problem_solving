@@ -1,3 +1,6 @@
+""" Reverting FULL NUMBER"""
+
+
 class Solution:
     def isPalindrome(self, x: int) -> bool:
         reverse = 0
