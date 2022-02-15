@@ -1,16 +1,19 @@
 class Solution:
     def reverse(self, x: int) -> int:
-        if x >= 2**31-1 or x <= -2**31: return 0
+        if x >= 2 ** 31 - 1 or x <= -2 ** 31:
+            return 0
         else:
             strg = str(x)
-            if x >= 0 :
+            if x >= 0:
                 revst = strg[::-1]
             else:
                 temp = strg[1:]
                 temp2 = temp[::-1]
                 revst = "-" + temp2
-            if int(revst) >= 2**31-1 or int(revst) <= -2**31: return 0
-            else: return int(revst)
+            if int(revst) >= 2 ** 31 - 1 or int(revst) <= -2 ** 31:
+                return 0
+            else:
+                return int(revst)
 
 
 class Solution2:
@@ -28,3 +31,7 @@ class Solution2:
             return 0
 
         return reversed if x > 0 else (reversed * -1)
+
+
+sol = Solution()
+print(sol.reverse(123))
